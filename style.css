@@ -144,7 +144,6 @@ footer {
 	padding-bottom: 50px;
 	position: absolute;
 	bottom: 0;
-  animation: float 6s ease-in-out infinite;
 }
 
 @media only screen (max-width: 1100px;) {

@@ -13,6 +13,20 @@ export default function Home() {
       <Head>
         <title>Aravind Natchiappan</title>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-SW1CJ0GWQC"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-SW1CJ0GWQC', { page_path: window.location.pathname });
+            `,
+          }}
+        />
       </Head>
       <div className="container flex mx-auto p-4 h-screen max-w-4xl">
         <div className="m-auto text-left">

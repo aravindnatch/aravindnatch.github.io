@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaRegFileAlt,
+  FaEnvelope
 } from "react-icons/fa";
 
 export default function Home() {
@@ -48,6 +49,9 @@ export default function Home() {
           <br />
           <Link href="https://aravindnatch.me/resume.pdf" passHref={true}>
             <FaRegFileAlt className="text-white text-3xl inline mr-10 hover:text-[#c32aa3] cursor-pointer" />
+          </Link>
+          <Link href="mailto:aru@gatech.edu" passHref={true}>
+            <FaEnvelope className="text-white text-3xl inline mr-10 hover:text-[#ff6961] cursor-pointer" />
           </Link>
           <Link href="https://linkedin.com/in/aravindnatch/" passHref={true}>
             <FaLinkedin className="text-white text-3xl inline mr-10 hover:text-[#0077B5] cursor-pointer" />

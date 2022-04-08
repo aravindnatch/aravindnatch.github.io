@@ -1,32 +1,32 @@
 [
     {
       "name": "Email for Business Inquiries",
-      "icon": "https://cdn-icons-png.flaticon.com/512/646/646094.png",
+      "icon": "/icons/email.png",
       "link": "mailto:hi@aravindnatch.me"
     },
     {
       "name": "play my truth or drink game",
-      "icon": "https://cdn-icons.flaticon.com/png/512/3174/premium/3174562.png?token=exp=1649394146~hmac=1e9e2ed9206053fe4b17e1615ac7f241",
+      "icon": "/icons/tod.png",
       "link": "https://tod.aru.wtf"
     },
     {
       "name": "LinkedIn",
-      "icon": "https://cdn-icons.flaticon.com/png/512/3536/premium/3536505.png?token=exp=1649393321~hmac=d35f7c67d50db89c67fe7541a437c342",
+      "icon": "/icons/linkedin.png",
       "link": "https://www.linkedin.com/in/aravindnatch"
     },
     {
       "name": "Instagram",
-      "icon": "https://cdn-icons-png.flaticon.com/512/174/174855.png",
+      "icon": "/icons/insta.png",
       "link": "https://instagram.com/aravindnatch"
     },
     {
       "name": "TikTok",
-      "icon": "https://cdn-icons-png.flaticon.com/512/3046/3046121.png",
+      "icon": "/icons/tiktok.png",
       "link": "https://www.tiktok.com/@aravindnatch"
     },
     {
       "name": "Venmo",
-      "icon": "https://www.vectorlogo.zone/logos/venmo/venmo-icon.svg",
+      "icon": "/icons/venmo.png",
       "link": "https://venmo.com/@aravindnatch?txn=pay&note=<3"
     }
 ]

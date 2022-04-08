@@ -16,7 +16,7 @@ const Mobile: NextPage = () => {
       </Head>
 
       <div className="rounded-full border-2 border-black w-36 h-36">
-        <Image src="/aravind.jpg" alt="logo"  width="100%" height="100%" layout="responsive" objectFit="contain" className="rounded-full"/>
+        <img src="/aravind.jpg" alt="logo"  width="100%" height="100%" className="rounded-full"/>
       </div>
 
       <br/>

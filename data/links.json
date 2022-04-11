@@ -1,6 +1,6 @@
 [
     {
-      "name": "Email for Business Inquiries",
+      "name": "email for business inquiries",
       "icon": "/icons/email.png",
       "link": "mailto:hi@aravindnatch.me"
     },
@@ -10,22 +10,12 @@
       "link": "https://tod.aru.wtf"
     },
     {
-      "name": "LinkedIn",
-      "icon": "/icons/linkedin.png",
-      "link": "https://www.linkedin.com/in/aravindnatch"
+      "name": "play my trivia game",
+      "icon": "/icons/trivia.png",
+      "link": "https://aravindnatch.me/trivia"
     },
     {
-      "name": "Instagram",
-      "icon": "/icons/insta.png",
-      "link": "https://instagram.com/aravindnatch"
-    },
-    {
-      "name": "TikTok",
-      "icon": "/icons/tiktok.png",
-      "link": "https://www.tiktok.com/@aravindnatch"
-    },
-    {
-      "name": "Venmo",
+      "name": "venmo me",
       "icon": "/icons/venmo.png",
       "link": "https://venmo.com/@aravindnatch?txn=pay&note=<3"
     }

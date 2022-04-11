@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
+import Script from "next/script";
+
 import {
   FaGithub,
   FaInstagram,
@@ -14,20 +16,7 @@ export default function Home() {
       <Head>
         <title>Aravind Natchiappan</title>
         <link rel="icon" href="/favicon.ico" />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-SW1CJ0GWQC"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-SW1CJ0GWQC', { page_path: window.location.pathname });
-            `,
-          }}
-        />
+        <script defer data-domain="aravindnatch.me" src="https://analytics.aru.wtf/js/plausible.js"></script>
       </Head>
       <div className="container flex mx-auto p-4 h-screen max-w-4xl">
         <div className="m-auto text-left">
@@ -47,21 +36,21 @@ export default function Home() {
           </div>
           <br />
           <br />
-          <Link href="https://aravindnatch.me/resume.pdf" passHref={true}>
+          <a href="https://aravindnatch.me/resume.pdf" target="_blank">
             <FaRegFileAlt className="text-white text-3xl inline mr-10 hover:text-[#c32aa3] cursor-pointer" />
-          </Link>
-          <Link href="mailto:aru@gatech.edu" passHref={true}>
+          </a>
+          <a href="mailto:aru@gatech.edu" target="_blank">
             <FaEnvelope className="text-white text-3xl inline mr-10 hover:text-[#ff6961] cursor-pointer" />
-          </Link>
-          <Link href="https://linkedin.com/in/aravindnatch/" passHref={true}>
+          </a>
+          <a href="https://linkedin.com/in/aravindnatch/" target="_blank">
             <FaLinkedin className="text-white text-3xl inline mr-10 hover:text-[#0077B5] cursor-pointer" />
-          </Link>
-          <Link href="https://github.com/aravindnatch/" passHref={true}>
+          </a>
+          <a href="https://github.com/aravindnatch/" target="_blank">
             <FaGithub className="text-white text-3xl inline mr-10 hover:text-[#7289DC] cursor-pointer" />
-          </Link>
-          <Link href="https://instagram.com/aravindnatch" passHref={true}>
+          </a>
+          <a href="https://instagram.com/aravindnatch" target="_blank">
             <FaInstagram className="text-white text-3xl inline mr-10 hover:text-[#c32aa3] cursor-pointer" />
-          </Link>
+          </a>
         </div>
       </div>
     </div>

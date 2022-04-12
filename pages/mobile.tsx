@@ -1,14 +1,13 @@
 import type { NextPage } from 'next'
-import Link from 'next/link';
-
 import links from '../data/links.json';
-
 import Head from 'next/head'
 
 import {
   FaTiktok,
   FaInstagram,
   FaLinkedin,
+  FaSpotify,
+  FaEnvelope
 } from "react-icons/fa";
 
 const Mobile: NextPage = () => {
@@ -17,6 +16,7 @@ const Mobile: NextPage = () => {
       <Head>
         <title>Aravind Natchiappan</title>
         <link rel="icon" href="/favicon.ico" />
+        <script defer data-domain="aravindnatch.me" src="https://analytics.aru.wtf/js/script.js"></script>
       </Head>
 
       <div className="rounded-full border-2 border-black w-36 h-36">
@@ -31,15 +31,21 @@ const Mobile: NextPage = () => {
       </div>
 
       <div className="flex mt-5">
-        <Link href="https://instagram.com/aravindnatch" passHref={true}>
+        <a href="https://instagram.com/aravindnatch" target="_blank">
+          <FaEnvelope className="text-white text-2xl inline mx-4 cursor-pointer" />
+        </a>
+        <a href="https://open.spotify.com/user/aravind.natch" target="_blank">
+          <FaSpotify className="text-white text-2xl inline mx-4 cursor-pointer" />
+        </a>
+        <a href="https://instagram.com/aravindnatch" target="_blank">
           <FaInstagram className="text-white text-2xl inline mx-4 cursor-pointer" />
-        </Link>
-        <Link href="https://www.tiktok.com/@aravindnatch" passHref={true}>
+        </a>
+        <a href="https://www.tiktok.com/@aravindnatch" target="_blank">
           <FaTiktok className="text-white text-2xl inline mx-4 cursor-pointer" />
-        </Link>
-        <Link href="https://linkedin.com/in/aravindnatch/" passHref={true}>
+        </a>
+        <a href="https://linkedin.com/in/aravindnatch/" target="_blank">
           <FaLinkedin className="text-white text-2xl inline mx-4 cursor-pointer" />
-        </Link>
+        </a>
       </div>
 
       <div className="container max-w-2xl mt-5 p-4">

@@ -1,10 +1,5 @@
 [
     {
-      "name": "email for business inquiries",
-      "icon": "/icons/email.png",
-      "link": "mailto:hi@aravindnatch.me"
-    },
-    {
       "name": "play my truth or drink game",
       "icon": "/icons/tod.png",
       "link": "https://tod.aru.wtf"

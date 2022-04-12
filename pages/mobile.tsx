@@ -31,7 +31,7 @@ const Mobile: NextPage = () => {
       </div>
 
       <div className="flex mt-5">
-        <a href="https://instagram.com/aravindnatch" target="_blank">
+        <a href="mailto:hi@aravindnatch.me" target="_blank">
           <FaEnvelope className="text-white text-2xl inline mx-4 cursor-pointer" />
         </a>
         <a href="https://open.spotify.com/user/aravind.natch" target="_blank">

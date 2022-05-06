@@ -1,1 +1,2 @@
-# Personal Website built with Next.js and TailwindCSS
+# aravindnatch.github.io
+Personal website built with Next.js and TailwindCSS

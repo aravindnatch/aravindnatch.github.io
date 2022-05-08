@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import { getMaxAge } from 'next/dist/server/image-optimizer';
 import Head from 'next/head'
 
 import {
@@ -10,25 +11,37 @@ import {
 } from "react-icons/fa";
 
 const Mobile: NextPage = () => {
+
+  function getAge() {
+    var today = new Date();
+    var birthDate = new Date('05/21/2002');
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+  }
+
   return (
     <div className="flex h-screen flex-col items-center bg-[#040608] mb-">
       <Head>
         <title>aravind natchiappan</title>
         <link rel="icon" href="/favicon.ico" />
-        {/* <script defer data-domain="aravindnatch.me" src="https://analytics.aru.wtf/js/script.js"></script> */}
+        <script defer data-domain="aravindnatch.me" src="https://analytics.aru.wtf/js/script.js"></script>
       </Head>
 
       <div className="bg-[#111315] px-10 pt-10 pb-5 w-full">
-        <div className="flex">
+        <div className="flex justify-evenly">
           <div className="w-32 h-32 min-w-32 min-h-32">
             <img src="/aravind.jpg" alt="logo" width="100%" height="100%" className="rounded-full"/>
           </div>
 
-          <div className="w-max flex-grow ml-6">
-            <h1 className="text-2xl font-semibold text-left text-white font">aravind</h1>
+          <div className="w-max ml-4">
+            <h1 className="text-xl font-semibold text-left text-white font">aravind natchiappan</h1>
 
             <div className="mt-4">
-              <h2 className="text-md text-left text-white">20 • photography</h2>
+              <h2 className="text-md text-left text-white">{getAge()} • photography</h2>
               <h2 className="text-md text-left text-white">comp sci @ gatech</h2>
               <h2 className="text-md text-left text-white">atlanta, georgia</h2>
             </div>

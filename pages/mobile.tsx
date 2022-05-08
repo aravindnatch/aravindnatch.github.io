@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import { getMaxAge } from 'next/dist/server/image-optimizer';
 import Head from 'next/head'
 
 import {
@@ -24,7 +23,7 @@ const Mobile: NextPage = () => {
   }
 
   return (
-    <div className="flex h-screen flex-col items-center bg-[#040608] mb-">
+    <div className="flex h-screen flex-col items-center mb-auto overflow-auto bg-[#040608]">
       <Head>
         <title>aravind natchiappan</title>
         <link rel="icon" href="/favicon.ico" />
@@ -32,38 +31,40 @@ const Mobile: NextPage = () => {
       </Head>
 
       <div className="bg-[#111315] px-10 pt-10 pb-5 w-full">
-        <div className="flex justify-evenly">
-          <div className="w-32 h-32 min-w-32 min-h-32">
-            <img src="/aravind.jpg" alt="logo" width="100%" height="100%" className="rounded-full"/>
-          </div>
+        <div className="max-w-md mx-auto">
+          <div className="flex justify-evenly">
+            <div className="w-32 h-32 min-w-32 min-h-32 ">
+              <img src="/aravind.jpg" alt="logo" width="100%" height="100%" className="rounded-full"/>
+            </div>
 
-          <div className="w-max ml-4">
-            <h1 className="text-xl font-semibold text-left text-white font">aravind natchiappan</h1>
+            <div className="w-max ml-3 mt-1">
+              <h1 className="text-md font-semibold text-left text-white font">aravind natchiappan</h1>
 
-            <div className="mt-4">
-              <h2 className="text-md text-left text-white">{getAge()} • photography</h2>
-              <h2 className="text-md text-left text-white">comp sci @ gatech</h2>
-              <h2 className="text-md text-left text-white">atlanta, georgia</h2>
+              <div className="mt-6">
+                <h2 className="text-sm text-left text-white">{getAge()} • photography</h2>
+                <h2 className="text-sm text-left text-white">comp sci @ gatech</h2>
+                <h2 className="text-sm text-left text-white">atlanta, georgia</h2>
+              </div>
             </div>
           </div>
-        </div>
-    
-        <div className="flex mt-7 justify-evenly">
-          <a href="mailto:hi@aravindnatch.me" target="_blank">
-            <FaEnvelope className="text-white text-2xl inline cursor-pointer" />
-          </a>
-          <a href="https://open.spotify.com/user/aravind.natch" target="_blank">
-            <FaSpotify className="text-white text-2xl inline cursor-pointer" />
-          </a>
-          <a href="https://instagram.com/aravindnatch" target="_blank">
-            <FaInstagram className="text-white text-2xl inline cursor-pointer" />
-          </a>
-          <a href="https://www.tiktok.com/@aravindnatch" target="_blank">
-            <FaTiktok className="text-white text-2xl inline cursor-pointer" />
-          </a>
-          <a href="https://linkedin.com/in/aravindnatch/" target="_blank">
-            <FaLinkedin className="text-white text-2xl inline cursor-pointer" />
-          </a>
+      
+          <div className="flex mt-7 justify-evenly">
+            <a href="mailto:hi@aravindnatch.me" target="_blank">
+              <FaEnvelope className="text-white text-2xl inline cursor-pointer" />
+            </a>
+            <a href="https://open.spotify.com/user/aravind.natch" target="_blank">
+              <FaSpotify className="text-white text-2xl inline cursor-pointer" />
+            </a>
+            <a href="https://instagram.com/aravindnatch" target="_blank">
+              <FaInstagram className="text-white text-2xl inline cursor-pointer" />
+            </a>
+            <a href="https://www.tiktok.com/@aravindnatch" target="_blank">
+              <FaTiktok className="text-white text-2xl inline cursor-pointer" />
+            </a>
+            <a href="https://linkedin.com/in/aravindnatch/" target="_blank">
+              <FaLinkedin className="text-white text-2xl inline cursor-pointer" />
+            </a>
+          </div>
         </div>
       </div>
 

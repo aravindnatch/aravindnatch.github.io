@@ -37,7 +37,7 @@ const Mobile: NextPage = () => {
               <img src="/aravind.jpg" alt="logo" width="100%" height="100%" className="rounded-full"/>
             </div>
 
-            <div className="w-max ml-3 mt-1">
+            <div className="w-max ml-3 mt-2">
               <h1 className="text-md font-semibold text-left text-white font">aravind natchiappan</h1>
 
               <div className="mt-6">

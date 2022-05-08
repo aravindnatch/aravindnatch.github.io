@@ -37,10 +37,10 @@ const Mobile: NextPage = () => {
               <img src="/aravind.jpg" alt="logo" width="100%" height="100%" className="rounded-full"/>
             </div>
 
-            <div className="w-max ml-3 mt-2">
+            <div className="w-max ml-3 mt-3">
               <h1 className="text-md font-semibold text-left text-white font">aravind natchiappan</h1>
 
-              <div className="mt-6">
+              <div className="mt-4">
                 <h2 className="text-sm text-left text-white">{getAge()} • photography</h2>
                 <h2 className="text-sm text-left text-white">comp sci @ gatech</h2>
                 <h2 className="text-sm text-left text-white">atlanta, georgia</h2>

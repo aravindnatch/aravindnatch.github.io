@@ -82,7 +82,7 @@ const Mobile: NextPage = () => {
           </div>
         </a>
 
-        <a href="https://aravindnatch.me/mobile" target="_blank">
+        <a href="https://aravindnatch.me/trivia" target="_blank">
           <div className="rounded-xl w-full border-2 border-white p-3 mb-5 bg-white">
               <img src="/icons/trivia.png" className="rounded-xl w-10 h-10 inline mr-5"/>
               <h1 className="right text-center items-left inline">trivia cracked</h1>

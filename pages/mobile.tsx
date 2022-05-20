@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
+import links from '../data/links.json'
+
 import {
   FaTiktok,
   FaInstagram,
@@ -70,37 +72,33 @@ const Mobile: NextPage = () => {
 
       <div className="bg-[#111315] w-full rounded-b-3xl p-2"></div>
 
-      <div className="container max-w-2xl mt-5 p-4">
-        <div className="w-full pb-5">
-          <h2 className="text-white text-left font-semibold">my games</h2>
-        </div>
-
-        <a href="https://tod.aru.wtf" target="_blank">
-          <div className="rounded-xl w-full border-2 border-white p-3 mb-5 bg-white">
-              <img src="/icons/tod.png" className="rounded-xl w-10 h-10 inline mr-5"/>
-              <h1 className="right text-center text-black items-left inline">truth or drink</h1>
-          </div>
-        </a>
-
-        <a href="https://aravindnatch.me/trivia" target="_blank">
-          <div className="rounded-xl w-full border-2 border-white p-3 mb-5 bg-white">
-              <img src="/icons/trivia.png" className="rounded-xl w-10 h-10 inline mr-5"/>
-              <h1 className="right text-center items-left inline">trivia cracked</h1>
-          </div>
-        </a>
-        
-        <hr className="opacity-20"/>
-
-        <div className="w-full py-5">
-          <h2 className="text-white text-left font-semibold">other links</h2>
-        </div>
-        
-        <a href="https://venmo.com/@aravindnatch?txn=pay&note=<3" target="_blank">
-          <div className="rounded-xl w-full border-2 border-white p-3 mb-5 bg-white">
-              <img src="/icons/venmo.png" className="rounded-xl w-10 h-10 inline mr-5"/>
-              <h1 className="right text-center items-left inline">venmo me</h1>
-          </div>
-        </a>
+      <div className="container max-w-2xl p-4">
+        {
+            links.map((items, index) => 
+              <>
+                <div className="w-full py-5">
+                  <h2 className="text-white text-left font-semibold">{items['name']}</h2>
+                </div>
+                {
+                  items['links'].map((link) =>
+                    <>
+                      <a href={link['link']} target="_blank">
+                        <div className="rounded-xl w-full border-2 border-white p-3 mb-5 bg-white">
+                            <img src={link['icon']} className="rounded-xl w-10 h-10 inline mr-5"/>
+                            <h1 className="right text-center text-black items-left inline">{link['name']}</h1>
+                        </div>
+                      </a>
+                    </>
+                  )
+                }
+                {
+                  index < links.length - 1
+                  ? (<hr className="opacity-2s0"/>)
+                  : null
+                }
+              </>
+            )
+        }
       </div>
     </div>
   )

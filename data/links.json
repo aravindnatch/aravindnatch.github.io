@@ -1,0 +1,27 @@
+[
+  {
+    "name": "my games",
+    "links": [
+      {
+        "name": "truth or drink",
+        "link": "https://tod.aru.wtf",
+        "icon": "/icons/tod.png"
+      },
+      {
+        "name": "trivia cracked",
+        "link": "https://aravindnatch.me/trivia",
+        "icon": "/icons/trivia.png"
+      }
+    ]
+  },
+  {
+    "name": "other links",
+    "links": [
+      {
+        "name": "venmo me",
+        "link": "https://venmo.com/@aravindnatch?txn=pay&note=<3",
+        "icon": "/icons/venmo.png"
+      }
+    ]
+  }
+]

@@ -75,28 +75,28 @@ const Mobile: NextPage = () => {
       <div className="container max-w-2xl p-4">
         {
             links.map((items, index) => 
-              <>
+              <div key={index}>
                 <div className="w-full py-5">
                   <h2 className="text-white text-left font-semibold">{items['name']}</h2>
                 </div>
                 {
-                  items['links'].map((link) =>
-                    <>
+                  items['links'].map((link, index) =>
+                    <div key={index}>
                       <a href={link['link']} target="_blank">
                         <div className="rounded-xl w-full border-2 border-white p-3 mb-5 bg-white">
                             <img src={link['icon']} className="rounded-xl w-10 h-10 inline mr-5"/>
                             <h1 className="right text-center text-black items-left inline">{link['name']}</h1>
                         </div>
                       </a>
-                    </>
+                    </div>
                   )
                 }
                 {
                   index < links.length - 1
-                  ? (<hr className="opacity-2s0"/>)
+                  ? (<hr className="opacity-20"/>)
                   : null
                 }
-              </>
+              </div>
             )
         }
       </div>

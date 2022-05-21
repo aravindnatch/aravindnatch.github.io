@@ -1,5 +1,15 @@
 [
   {
+    "name": "photography",
+    "links": [
+      {
+        "name": "contact & request sample",
+        "link": "mailto:photo@aravindnatch.me",
+        "icon": "/icons/photo.png"
+      }
+    ]
+  },  
+  {
     "name": "my games",
     "links": [
       {
@@ -11,16 +21,6 @@
         "name": "trivia cracked",
         "link": "https://aravindnatch.me/trivia",
         "icon": "/icons/trivia.png"
-      }
-    ]
-  },
-  {
-    "name": "other links",
-    "links": [
-      {
-        "name": "venmo me",
-        "link": "https://venmo.com/@aravindnatch?txn=pay&note=<3",
-        "icon": "/icons/venmo.png"
       }
     ]
   }

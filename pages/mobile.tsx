@@ -25,7 +25,7 @@ const Mobile: NextPage = () => {
   }
 
   return (
-    <div className="flex h-screen flex-col items-center mb-auto overflow-auto bg-[#040608]">
+    <div className="flex h-screen flex-col items-center mb-auto overflow-hidden bg-[#040608]">
       <Head>
         <title>aravind natchiappan</title>
         <link rel="icon" href="/favicon.ico" />

@@ -4,11 +4,11 @@ import Head from 'next/head'
 import links from '../data/links.json'
 
 import {
-  FaTiktok,
   FaInstagram,
-  FaLinkedin,
   FaSpotify,
-  FaEnvelope
+  FaEnvelope,
+  FaSnapchatGhost,
+  FaLinkedinIn
 } from "react-icons/fa";
 
 const Mobile: NextPage = () => {
@@ -60,11 +60,11 @@ const Mobile: NextPage = () => {
             <a href="https://instagram.com/aravindnatch" target="_blank">
               <FaInstagram className="text-white text-2xl inline cursor-pointer" />
             </a>
-            <a href="https://www.tiktok.com/@aravindnatch" target="_blank">
-              <FaTiktok className="text-white text-2xl inline cursor-pointer" />
+            <a href="https://snapchat.com/add/aravindnatch" target="_blank">
+              <FaSnapchatGhost className="text-white text-2xl inline cursor-pointer" />
             </a>
-            <a href="https://linkedin.com/in/aravindnatch/" target="_blank">
-              <FaLinkedin className="text-white text-2xl inline cursor-pointer" />
+            <a href="https://www.linkedin.com/in/aravindnatch" target="_blank">
+              <FaLinkedinIn className="text-white text-2xl inline cursor-pointer" />
             </a>
           </div>
         </div>

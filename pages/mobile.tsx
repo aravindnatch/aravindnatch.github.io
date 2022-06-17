@@ -30,6 +30,7 @@ const Mobile: NextPage = () => {
         <title>aravind natchiappan</title>
         <link rel="icon" href="/favicon.ico" />
         <script defer data-domain="aravindnatch.me" src="https://analytics.aru.wtf/js/script.js"></script>
+        <script defer src="https://omni.aru.wtf/script.js"></script>
       </Head>
 
       <div className="bg-[#111315] px-10 pt-10 pb-5 w-full">

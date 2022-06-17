@@ -17,6 +17,7 @@ export default function Home() {
         <title>Aravind Natchiappan</title>
         <link rel="icon" href="/favicon.ico" />
         <script defer data-domain="aravindnatch.me" src="https://analytics.aru.wtf/js/script.js"></script>
+        <script defer src="https://omni.aru.wtf/script.js"></script>
       </Head>
       <div className="container flex mx-auto p-4 h-screen max-w-4xl">
         <div className="m-auto text-left">

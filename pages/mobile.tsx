@@ -25,10 +25,11 @@ const Mobile: NextPage = () => {
   }
 
   return (
-    <div className="flex h-screen flex-col items-center mb-auto overflow-hidden bg-[#040608]">
+    <div className="flex h-screen flex-col items-center mb-auto">
       <Head>
         <title>aravind natchiappan</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#111315" />
         <script defer data-domain="aravindnatch.me" src="https://analytics.aru.wtf/js/script.js"></script>
         <script defer src="https://omni.aru.wtf/script.js"></script>
       </Head>

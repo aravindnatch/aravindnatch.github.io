@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Typewriter from "typewriter-effect";
 
 import links from '../data/links.json'
 
@@ -23,7 +24,7 @@ const Mobile: NextPage = () => {
     }
     return age;
   }
-
+  
   return (
     <div className="flex h-screen flex-col items-center mb-auto">
       <Head>
@@ -45,7 +46,18 @@ const Mobile: NextPage = () => {
               <h1 className="text-md font-semibold text-left text-white font">aravind natchiappan</h1>
 
               <div className="mt-4">
-                <h2 className="text-sm text-left text-white">{getAge()} • photography</h2>
+                <h2 className="text-sm text-left text-white inline">{getAge()} •&nbsp;
+                  <div className="inline-block">
+                    <Typewriter 
+                      options={{
+                        strings: ['photography', 'apparel', 'film'],
+                        autoStart: true,
+                        loop: true,
+                        cursor: ''
+                      }}
+                    />
+                  </div>
+                </h2>
                 <h2 className="text-sm text-left text-white">comp sci @ gatech</h2>
                 <h2 className="text-sm text-left text-white">atlanta, georgia</h2>
               </div>

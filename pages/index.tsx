@@ -10,14 +10,15 @@ import {
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center bg-[#0D1319]">
+    <div className="flex flex-col items-center justify-center bg-[#0D1319] fixmobilevh h-screen">
       <Head>
         <title>Aravind Natchiappan</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#0D1319" />
         <script defer data-domain="aravindnatch.me" src="https://analytics.aru.wtf/js/script.js"></script>
         <script defer src="https://omni.aru.wtf/script.js"></script>
       </Head>
-      <div className="container flex mx-auto p-4 h-screen max-w-4xl">
+      <div className="container flex mx-auto p-4 max-w-4xl">
         <div className="m-auto text-left">
           <div className="text-6xl text-header text-white font-semibold">
             hi, i'm <span className="text-blue-400">aravind.</span>

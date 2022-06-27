@@ -5,3 +5,9 @@
 body {
   background-color: #040608;
 }
+
+@supports (-webkit-touch-callout: none) {
+  .fixmobilevh {
+    height: -webkit-fill-available;
+  }
+}

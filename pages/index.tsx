@@ -1,7 +1,6 @@
 import Head from "next/head"
 import { isMobile } from 'react-device-detect';
-import { useEffect } from "react";
-import { useRouter } from "next/router";
+import { useEffect, useLayoutEffect } from "react";
 
 import {
   FaGithub,
@@ -12,9 +11,13 @@ import {
 } from "react-icons/fa";
 
 export default function Home() {  
-  useEffect(() => {
+
+  const canUseDOM = typeof window !== 'undefined';
+  const useIsomorphicLayoutEffect = canUseDOM ? useLayoutEffect : useEffect;
+
+  useIsomorphicLayoutEffect(() => {
     if (isMobile) {
-      window.location.href = "/mobile";
+      window.location.replace("/mobile");
     }
   }, []);
 

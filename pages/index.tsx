@@ -1,4 +1,7 @@
-import Head from "next/head";
+import Head from "next/head"
+import { isMobile } from 'react-device-detect';
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 import {
   FaGithub,
@@ -8,7 +11,13 @@ import {
   FaEnvelope
 } from "react-icons/fa";
 
-export default function Home() {
+export default function Home() {  
+  useEffect(() => {
+    if (isMobile) {
+      window.location.href = "/mobile";
+    }
+  }, []);
+
   return (
     <div className="flex flex-col items-center justify-center bg-[#0D1319] fixmobilevh h-screen">
       <Head>

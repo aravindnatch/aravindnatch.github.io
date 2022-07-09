@@ -31,7 +31,7 @@ const Mobile: NextPage = () => {
         <title>aravind natchiappan</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#111315" />
-        <script defer src="https://omni.aru.wtf/script.js"></script>
+        {/* <script defer src="https://omni.aru.wtf/script.js"></script> */}
       </Head>
 
       <div className="bg-[#111315] px-10 pt-10 pb-5 w-full">

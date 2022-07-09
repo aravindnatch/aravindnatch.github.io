@@ -1,5 +1,4 @@
 import Head from "next/head"
-import Script from "next/script";
 import { isMobile } from 'react-device-detect';
 import MobileRedirect from "../components/redirect";
 
@@ -18,7 +17,7 @@ export default function Home() {
       <title>Aravind Natchiappan</title>
       <link rel="icon" href="/favicon.ico" />
       <meta name="theme-color" content="#0D1319" />
-      <Script src="https://omni.aru.wtf/script.js" strategy="beforeInteractive"></Script>
+      <script defer src="https://omni.aru.wtf/script.js"></script>
     </Head>
     <div className="container flex mx-auto p-4 max-w-4xl">
       <div className="m-auto text-left">

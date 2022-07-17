@@ -6,7 +6,6 @@ import HomeComponent from "../components/home";
 import MobileComponent from "../components/mobile";
 
 const Home: NextPage = () => { 
-  
   return (
     <Fragment>
       <MediaQuery minDeviceWidth={1224}>

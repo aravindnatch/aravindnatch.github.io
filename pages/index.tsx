@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <MediaQuery minDeviceWidth={1224}>
             <HomeComponent />
         </MediaQuery>
-        <MediaQuery maxDeviceWidth={1224}>
+        <MediaQuery maxDeviceWidth={1223}>
             <MobileComponent />
         </MediaQuery>
       </Fragment>

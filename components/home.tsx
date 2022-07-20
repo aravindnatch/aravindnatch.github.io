@@ -11,7 +11,7 @@ import {
 
 const HomeComponent: NextPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-[#0D1319] fixmobilevh h-screen">
+    <div className="flex flex-col items-center justify-center bg-[#0D1319] h-screen">
     <Head>
       <title>Aravind Natchiappan</title>
       <link rel="icon" href="/favicon.ico" />

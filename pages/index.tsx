@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <script defer src="https://omni.aru.wtf/script.js"></script>
+        <script async src="https://omni.aru.wtf/script.js"></script>
       </Head>
       <Fragment>
         <MediaQuery minDeviceWidth={1224}>

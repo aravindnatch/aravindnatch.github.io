@@ -6,7 +6,7 @@ const Mobile: NextPage = () => {
   return (
     <>
       <Head>
-        <script async src="https://omni.aru.wtf/script.js"></script>
+        <script defer src="https://omni.aru.wtf/script.js"></script>
       </Head>
       <MobileComponent />
     </>

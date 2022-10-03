@@ -1,13 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head';
+import Script from 'next/script';
 import MobileComponent from '../components/mobile';
 
 const Mobile: NextPage = () => {
   return (
     <>
-      <Head>
-        <script defer src="https://omni.aru.wtf/script.js"></script>
-      </Head>
+      <Script src="https://omni.aru.wtf/script.js"></Script>
       <MobileComponent />
     </>
   )

@@ -5,12 +5,13 @@ import MediaQuery from 'react-responsive'
 
 import HomeComponent from "../components/home";
 import MobileComponent from "../components/mobile";
+import Script from 'next/script';
 
 const Home: NextPage = () => { 
   return (
     <>
+      <Script src="https://omni.aru.wtf/script.js"></Script>
       <Head>
-        <script defer src="https://omni.aru.wtf/script.js"></script>
       </Head>
       <Fragment>
         <MediaQuery minDeviceWidth={1224}>

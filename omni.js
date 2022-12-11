@@ -1,0 +1,1 @@
+var xhr=new XMLHttpRequest;xhr.open("POST","https://omni.aru.wtf/event",!0),xhr.setRequestHeader("Content-Type","application/json"),xhr.send(JSON.stringify({referrer:window.document.referrer,userAgent:navigator.userAgent,website:window.location.href}));

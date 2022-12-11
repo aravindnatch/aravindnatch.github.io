@@ -6,7 +6,7 @@ import MobileComponent from '../components/mobile';
 const Mobile: NextPage = () => {
   return (
     <>
-      <Script src="https://omni.aru.wtf/script.js"></Script>
+      <Script src="/script.js"></Script>
       <MobileComponent />
     </>
   )

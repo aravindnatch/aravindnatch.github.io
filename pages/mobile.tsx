@@ -6,7 +6,7 @@ import MobileComponent from '../components/mobile';
 const Mobile: NextPage = () => {
   return (
     <>
-      <Script src="/script.js"></Script>
+      <Script src="/omni.js"></Script>
       <MobileComponent />
     </>
   )

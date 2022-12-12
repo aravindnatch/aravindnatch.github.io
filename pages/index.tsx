@@ -9,7 +9,7 @@ import Script from 'next/script';
 const Home: NextPage = () => { 
   return (
     <>
-      <Script src="/script.js"></Script>
+      <Script src="/omni.js"></Script>
       <Fragment>
         <MediaQuery minDeviceWidth={1224}>
             <HomeComponent />

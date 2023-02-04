@@ -37,7 +37,7 @@ const HomeComponent: NextPage = () => {
           <a href="https://aravindnatch.me/resume.pdf" target="_blank">
             <FaRegFileAlt className="text-white text-3xl inline mr-10 hover:text-[#c32aa3] cursor-pointer" />
           </a>
-          <a href="mailto:aravind.natch@gmail.com" target="_blank">
+          <a href="mailto:aru@gatech.edu" target="_blank">
             <FaEnvelope className="text-white text-3xl inline mr-10 hover:text-[#ff6961] cursor-pointer" />
           </a>
           <a href="https://linkedin.com/in/aravindnatch/" target="_blank">

@@ -104,8 +104,8 @@ const Mobile: NextPage = () => {
                 <div className="flex-shrink-0 justify-left pr-1 ml-1">
                   {
                     listening.image ? 
-                      <img src={listening.image} className="h-8 w-8 rounded-xl"/> : 
-                      <div className="h-8 w-8 rounded-xl bg-gray-500"></div>
+                      <img src={listening.image} className="h-8 w-8 rounded-full"/> : 
+                      <div className="h-8 w-8 rounded-full bg-gray-500"></div>
                   }
                 </div>
                 <div className="text-white text-left text-sm px-2 truncate">

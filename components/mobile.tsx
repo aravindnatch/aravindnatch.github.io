@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import axios from 'axios'
+import { Audio } from 'react-loader-spinner'
 
 import links from '../data/links.json'
 
@@ -10,8 +12,25 @@ import {
   FaSnapchatGhost,
   FaLinkedinIn
 } from "react-icons/fa";
+import { useEffect, useState } from 'react';
 
 const Mobile: NextPage = () => {
+  const [listening, setListening] = useState({artist: '', song: '', image: '', link: 'https://open.spotify.com/user/aravind.natch'})
+
+  useEffect(() => {
+    axios.get('https://listening.aru.wtf/spotify/current').then((res) => {
+      if (res.data === '') {
+        setListening({artist: '', song: '', image: '', link: 'https://open.spotify.com/user/aravind.natch'})
+        return
+      }
+
+      const artist = res.data.artists[0].name
+      const song = res.data.name
+      const image = res.data.album.images[0].url
+      const link = `https://open.spotify.com/track/${res.data.id}`
+      setListening({artist, song, image, link})
+    }).catch(() => {})
+  }, [])
 
   function getAge() {
     var today = new Date();
@@ -32,7 +51,7 @@ const Mobile: NextPage = () => {
         <meta name="theme-color" content="#111315" />
       </Head>
 
-      <div className="bg-[#111315] px-10 pt-10 pb-5 w-full">
+      <div className="bg-[#111315] px-10 pt-10 w-full">
         <div className="max-w-md mx-auto">
           <div className="flex justify-evenly">
             <div className="w-32 h-32 min-w-32 min-h-32 ">
@@ -77,6 +96,28 @@ const Mobile: NextPage = () => {
             </a>
             <a href="https://www.linkedin.com/in/aravindnatch" target="_blank">
               <FaLinkedinIn className="text-white text-2xl inline cursor-pointer" />
+            </a>
+          </div>
+
+          <div className="w-full">
+            <a href={listening.link} className="w-full justify-center flex">
+              <div className="flex border border-gray-500 rounded-xl mt-5 p-2 items-center w-full">
+                <div className="flex-shrink-0 justify-left pr-1">
+                  {
+                    listening.image ? 
+                      <img src={listening.image} className="h-8 w-8 rounded-xl"/> : 
+                      <div className="h-8 w-8 rounded-xl bg-gray-500"></div>
+                  }
+                </div>
+                <div className="text-white text-left text-sm px-2 truncate">
+                  {listening.song || 'not listening to anything'}
+                  <div className="text-xs">
+                    <span className="text-gray-400">
+                      {listening.artist || 'Spotify'}
+                    </span>
+                  </div>
+                </div>
+              </div>
             </a>
           </div>
         </div>

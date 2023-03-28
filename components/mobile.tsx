@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import axios from 'axios'
-import { Audio } from 'react-loader-spinner'
 
 import links from '../data/links.json'
 

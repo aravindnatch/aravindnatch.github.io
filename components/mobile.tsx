@@ -101,7 +101,7 @@ const Mobile: NextPage = () => {
           <div className="w-full">
             <a href={listening.link} className="w-full justify-center flex">
               <div className="flex border border-gray-500 rounded-full mt-7 p-2 items-center w-10/12">
-                <div className="flex-shrink-0 justify-left pr-1">
+                <div className="flex-shrink-0 justify-left pr-1 ml-1">
                   {
                     listening.image ? 
                       <img src={listening.image} className="h-8 w-8 rounded-xl"/> : 

@@ -13,23 +13,80 @@ import {
 } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 
+interface Listening {
+  artist: string,
+  song: string,
+  image: string,
+  link: string,
+  duration: string
+}
+
+const msToTime = (duration: number) => {
+  let minutes = Math.floor(duration / 60000);
+  let seconds: number = Number(((duration % 60000) / 1000).toFixed(0));
+  return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+}
+
 const Mobile: NextPage = () => {
-  const [listening, setListening] = useState({artist: '', song: '', image: '', link: 'https://open.spotify.com/user/aravind.natch'})
+  const [ listening, setListening ] = useState<Listening>({artist: '', song: '', image: '', link: 'https://open.spotify.com/user/aravind.natch', duration: "0:00"})
+  const [ time, setTime ] = useState("0:00")
+  const [ forceChange, setForceChange ] = useState(false)
+  const [ isPlaying, setIsPlaying ] = useState(false)
+
+  function fetchData() {
+    axios.get('https://listening.aru.wtf/spotify/current').then((res) => {
+      if (res.data === '') { return }
+
+      console.log(res.data)
+
+      const artist = res.data.item.artists[0].name
+      const song = res.data.item.name
+      const image = res.data.item.album.images[0].url
+      const link = `https://open.spotify.com/track/${res.data.item.id}`
+
+      const time = msToTime(res.data.progress_ms)
+      const duration = msToTime(res.data.item.duration_ms)
+
+      setIsPlaying(res.data.is_playing)
+      setListening({artist, song, image, link, duration})
+      setTime(time)
+    }).catch(() => {})
+  }
 
   useEffect(() => {
-    axios.get('https://listening.aru.wtf/spotify/current').then((res) => {
-      if (res.data === '') {
-        setListening({artist: '', song: '', image: '', link: 'https://open.spotify.com/user/aravind.natch'})
-        return
-      }
-
-      const artist = res.data.artists[0].name
-      const song = res.data.name
-      const image = res.data.album.images[0].url
-      const link = `https://open.spotify.com/track/${res.data.id}`
-      setListening({artist, song, image, link})
-    }).catch(() => {})
+    fetchData();
   }, [])
+
+  useEffect(() => {
+    if (!isPlaying) { 
+      setListening({artist: '', song: '', image: '', link: 'https://open.spotify.com/user/aravind.natch', duration: "0:00"})
+      return 
+    }
+
+    const interval = setInterval(() => {
+      setTime((prev) => {
+        const [ minutes, seconds ] = prev.split(':')
+        const newSeconds = Number(seconds) + 1
+        const durationInSeconds = parseInt(listening.duration.split(':')[0]) * 60 + parseInt(listening.duration.split(':')[1])
+
+        if ((newSeconds + parseInt(minutes) * 60 >= durationInSeconds)) {
+          clearInterval(interval)
+          setTimeout(() => {
+            fetchData()
+          }, 5000)
+          return listening.duration
+        }
+
+        if (newSeconds === 60) {
+          return `${Number(minutes) + 1}:00`
+        }
+
+        return `${minutes}:${newSeconds < 10 ? '0' : ''}${newSeconds}`
+      })
+    }, 1000)
+    
+    return () => clearInterval(interval)
+  }, [listening.duration, isPlaying])
 
   function getAge() {
     var today = new Date();
@@ -61,19 +118,7 @@ const Mobile: NextPage = () => {
               <h1 className="text-md font-semibold text-left text-white font">aravind natchiappan</h1>
 
               <div className="mt-4">
-                <h2 className="text-sm text-left text-white inline">{getAge()} • photography
-                  {/* &nbsp;
-                  <div className="inline-block">
-                    <Typewriter 
-                      options={{
-                        strings: ['photography', 'apparel', 'film'],
-                        autoStart: true,
-                        loop: true,
-                        cursor: ''
-                      }}
-                    />
-                  </div> */}
-                </h2>
+                <h2 className="text-sm text-left text-white inline">{getAge()} • photography</h2>
                 <h2 className="text-sm text-left text-white">comp sci @ gatech</h2>
                 <h2 className="text-sm text-left text-white">atlanta, georgia</h2>
               </div>
@@ -100,7 +145,7 @@ const Mobile: NextPage = () => {
 
           <div className="w-full">
             <a href={listening.link} className="w-full justify-center flex">
-              <div className="flex border border-gray-500 rounded-full mt-7 p-2 items-center w-10/12">
+              <div className="flex border border-gray-500 rounded-full mt-7 p-2 justify-between items-center w-10/12">
                 <div className="flex-shrink-0 justify-left pr-1 ml-1">
                   {
                     listening.image ? 
@@ -108,7 +153,7 @@ const Mobile: NextPage = () => {
                       <div className="h-8 w-8 rounded-full bg-gray-500"></div>
                   }
                 </div>
-                <div className="text-white text-left text-sm px-2 truncate">
+                <div className="text-white text-left text-sm pl-2 truncate w-full">
                   {listening.song || 'not listening to anything'}
                   <div className="text-xs">
                     <span className="text-gray-400">
@@ -116,6 +161,18 @@ const Mobile: NextPage = () => {
                     </span>
                   </div>
                 </div>
+                {
+                  listening.song ?
+                    <div className="flex flex-col text-white text-sm px-2 text-right">
+                      {time || '12220:00'}
+                      <div className="text-xs">
+                        <span className="text-gray-400">
+                          {listening.duration || '0:00'}
+                        </span>
+                      </div>
+                    </div>
+                  : null
+                }
               </div>
             </a>
           </div>

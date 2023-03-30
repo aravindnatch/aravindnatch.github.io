@@ -107,7 +107,7 @@ const Mobile: NextPage = () => {
         <meta name="theme-color" content="#111315" />
       </Head>
 
-      <div className="bg-[#111315] px-10 pt-10 w-full">
+      <div className="bg-[#111315] px-10 pt-10 pb-3 w-full">
         <div className="max-w-md mx-auto">
           <div className="flex justify-evenly">
             <div className="w-32 h-32 min-w-32 min-h-32 ">
@@ -145,7 +145,7 @@ const Mobile: NextPage = () => {
 
           <div className="w-full">
             <a href={listening.link} className="w-full justify-center flex">
-              <div className="flex border border-gray-500 rounded-full mt-7 p-2 justify-between items-center w-10/12">
+              <div className="flex border-2 border-[#363C3D] rounded-full mt-7 p-2 justify-between items-center w-10/12">
                 <div className="flex-shrink-0 justify-left pr-1 ml-1">
                   {
                     listening.image ? 

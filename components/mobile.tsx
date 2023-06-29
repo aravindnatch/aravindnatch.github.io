@@ -118,7 +118,7 @@ const Mobile: NextPage = () => {
               <h1 className="text-md font-semibold text-left text-white font">aravind natchiappan</h1>
 
               <div className="mt-4">
-                <h2 className="text-sm text-left text-white inline">{getAge()} • photography</h2>
+                <h2 className="text-sm text-left text-white inline">{getAge()} • dreamer</h2>
                 <h2 className="text-sm text-left text-white">comp sci @ gatech</h2>
                 <h2 className="text-sm text-left text-white">atlanta, georgia</h2>
               </div>

@@ -29,8 +29,7 @@ const HomeComponent: NextPage = () => {
           <br />
 
           <div className="text-2xl text-header text-white text-opacity-90">
-            I'm a computer science student at Georgia Tech currently working on improving the distribution of
-            financial information for retail investors.
+            I'm a computer science student at Georgia Tech currently building a platform for creators to engage with their most loyal fans.
           </div>
           <br />
           <br />

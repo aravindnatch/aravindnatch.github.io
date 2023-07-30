@@ -3,7 +3,7 @@
     "name": "photography",
     "links": [
       {
-        "name": "contact & request sample",
+        "name": "Book or Request Sample",
         "link": "mailto:photo@aravindnatch.me",
         "icon": "/icons/photo.png"
       }
@@ -13,14 +13,14 @@
     "name": "my games",
     "links": [
       {
-        "name": "truth or drink",
-        "link": "https://tod.aru.wtf",
-        "icon": "/icons/tod.png"
+        "name": "Do or Drink",
+        "link": "https://doordr.ink",
+        "icon": "/icons/dod.png"
       },
       {
-        "name": "trivia cracked",
-        "link": "https://aravindnatch.me/trivia",
-        "icon": "/icons/trivia.png"
+        "name": "Truth or Drink",
+        "link": "https://tod.aru.wtf",
+        "icon": "/icons/tod.png"
       }
     ]
   }

@@ -102,7 +102,7 @@ const Mobile: NextPage = () => {
   return (
     <div className="flex h-screen fixmobilevh flex-col items-center mb-auto">
       <Head>
-        <title>aravind natchiappan</title>
+        <title>Aravind Natchiappan</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#111315" />
       </Head>
@@ -115,7 +115,7 @@ const Mobile: NextPage = () => {
             </div>
 
             <div className="w-max ml-3 mt-3">
-              <h1 className="text-md font-semibold text-left text-white font">aravind natchiappan</h1>
+              <h1 className="text-md font-semibold text-left text-white font">Aravind Natchiappan</h1>
 
               <div className="mt-4">
                 <h2 className="text-sm text-left text-white inline">{getAge()} • dreamer</h2>

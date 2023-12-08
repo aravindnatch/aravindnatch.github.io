@@ -185,9 +185,15 @@ const Mobile: NextPage = () => {
         {
             links.map((items, index) => 
               <div key={index} className="">
-                <div className="w-full pb-6 pl-2">
-                  <h2 className="text-white opacity-90 text-left font-semibold">{items['name']}</h2>
-                </div>
+                {
+                  items['name'] ? (
+                    <div className="w-full pb-6 pl-2">
+                      <h2 className="text-white opacity-90 text-left font-semibold">{items['name']}</h2>
+                    </div>
+                  ) : (
+                    <div className="mt-3"></div>
+                  )
+                }
                 {
                   items['links'].map((link, index) =>
                     <div key={index} className="">

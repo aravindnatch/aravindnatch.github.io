@@ -1,11 +1,11 @@
 [
   {
-    "name": "photography",
+    "name": "",
     "links": [
       {
-        "name": "Book or Request Sample",
-        "link": "mailto:photo@aravindnatch.me",
-        "icon": "/icons/photo.png"
+        "name": "SupplyDrop",
+        "link": "https://supplydrop.ai",
+        "icon": "/icons/supplydrop.png"
       }
     ]
   },  

@@ -118,8 +118,8 @@ const Mobile: NextPage = () => {
               <h1 className="text-md font-semibold text-left text-white font">Aravind Natchiappan</h1>
 
               <div className="mt-4">
-                <h2 className="text-sm text-left text-white inline">{getAge()} • dreamer</h2>
-                <h2 className="text-sm text-left text-white">comp sci @ gatech</h2>
+                <h2 className="text-sm text-left text-white inline">{getAge()} • gatech alum</h2>
+                <h2 className="text-sm text-left text-white">doing startup stuff</h2>
                 <h2 className="text-sm text-left text-white">atlanta, georgia</h2>
               </div>
             </div>
@@ -154,25 +154,21 @@ const Mobile: NextPage = () => {
                   }
                 </div>
                 <div className="text-white text-left text-sm pl-2 truncate w-full">
-                  {listening.song || 'not listening to anything'}
+                  {listening.song || 'my ears are taking a break'}
                   <div className="text-xs">
                     <span className="text-gray-400">
-                      {listening.artist || 'Spotify'}
+                      {listening.artist || 'music'}
                     </span>
                   </div>
                 </div>
-                {
-                  listening.song ?
-                    <div className="flex flex-col text-white text-sm px-2 text-right">
-                      {time || '12220:00'}
-                      <div className="text-xs">
-                        <span className="text-gray-400">
-                          {listening.duration || '0:00'}
-                        </span>
-                      </div>
-                    </div>
-                  : null
-                }
+                <div className="flex flex-col text-white text-sm px-2 text-right">
+                  {time && listening.song ? time : '0:00'}
+                  <div className="text-xs">
+                    <span className="text-gray-400">
+                      {listening.duration && listening.song ? listening.duration : '0:00'}
+                    </span>
+                  </div>
+                </div>
               </div>
             </a>
           </div>
@@ -183,31 +179,31 @@ const Mobile: NextPage = () => {
 
       <div className="container max-w-2xl p-4">
         {
-            links.map((items, index) => 
-              <div key={index} className="">
-                {
-                  items['name'] ? (
-                    <div className="w-full pb-6 pl-2">
-                      <h2 className="text-white opacity-90 text-left font-semibold">{items['name']}</h2>
-                    </div>
-                  ) : (
-                    <div className="mt-3"></div>
-                  )
-                }
-                {
-                  items['links'].map((link, index) =>
-                    <div key={index} className="">
-                      <a href={link['link']} target="_blank">
-                        <div className="rounded-2xl w-full border-[#363C3D] p-3 mb-5 bg-[#111315] flex items-center">
-                            <img src={link['icon']} className="rounded-xl w-10 h-10 inline mr-5"/>
-                            <h1 className="right text-center text-white items-left inline">{link['name']}</h1>
-                        </div>
-                      </a>
-                    </div>
-                  )
-                }
-              </div>
-            )
+          links.map((items, index) => 
+            <div key={index} className="mt-1">
+              {
+                items['name'] ? (
+                  <div className="w-full pb-6 pl-2">
+                    <h2 className="text-white opacity-90 text-left font-semibold">{items['name']}</h2>
+                  </div>
+                ) : (
+                  <div className="mt-3"></div>
+                )
+              }
+              {
+                items['links'].map((link, index) =>
+                  <div key={index} className="">
+                    <a href={link['link']} target="_blank">
+                      <div className="rounded-2xl w-full border-[#363C3D] p-3 mb-5 bg-[#111315] flex items-center">
+                          <img src={link['icon']} className="rounded-xl w-10 h-10 inline mr-5"/>
+                          <h1 className="right text-center text-white items-left inline">{link['name']}</h1>
+                      </div>
+                    </a>
+                  </div>
+                )
+              }
+            </div>
+          )
         }
       </div>
     </div>

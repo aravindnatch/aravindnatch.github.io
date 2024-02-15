@@ -30,7 +30,6 @@ const msToTime = (duration: number) => {
 const Mobile: NextPage = () => {
   const [ listening, setListening ] = useState<Listening>({artist: '', song: '', image: '', link: 'https://open.spotify.com/user/aravind.natch', duration: "0:00"})
   const [ time, setTime ] = useState("0:00")
-  const [ forceChange, setForceChange ] = useState(false)
   const [ isPlaying, setIsPlaying ] = useState(false)
 
   function fetchData() {
@@ -120,7 +119,7 @@ const Mobile: NextPage = () => {
               <div className="mt-4">
                 <h2 className="text-sm text-left text-white inline">{getAge()} • gatech alum</h2>
                 <h2 className="text-sm text-left text-white">doing startup stuff</h2>
-                <h2 className="text-sm text-left text-white">atlanta, georgia</h2>
+                <h2 className="text-sm text-left text-white">new york city</h2>
               </div>
             </div>
           </div>
@@ -154,7 +153,7 @@ const Mobile: NextPage = () => {
                   }
                 </div>
                 <div className="text-white text-left text-sm pl-2 truncate w-full">
-                  {listening.song || 'my ears are taking a break'}
+                  {listening.song || 'i\'m not listening to anything'}
                   <div className="text-xs">
                     <span className="text-gray-400">
                       {listening.artist || 'music'}

@@ -106,7 +106,7 @@ const Mobile: NextPage = () => {
         <meta name="theme-color" content="#111315" />
       </Head>
 
-      <div className="bg-[#111315] px-10 pt-10 pb-3 w-full">
+      <div className="bg-[#111315] px-5 pt-10 pb-3 w-full">
         <div className="max-w-md mx-auto">
           <div className="flex justify-evenly">
             <div className="w-32 h-32 min-w-32 min-h-32 ">
@@ -153,7 +153,7 @@ const Mobile: NextPage = () => {
                   }
                 </div>
                 <div className="text-white text-left text-sm pl-2 truncate w-full">
-                  {listening.song || 'i\'m not listening to anything'}
+                  {listening.song || 'not listening to anything'}
                   <div className="text-xs">
                     <span className="text-gray-400">
                       {listening.artist || 'music'}

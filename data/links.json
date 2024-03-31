@@ -1,5 +1,15 @@
 [
   {
+    "name": "my stuff",
+    "links": [
+      {
+        "name": "SupplyDrop",
+        "link": "https://supplydrop.ai",
+        "icon": "/icons/sd.png"
+      }
+    ]
+  },
+  {
     "name": "my games",
     "links": [
       {
